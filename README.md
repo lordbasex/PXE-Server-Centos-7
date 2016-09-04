@@ -1,5 +1,5 @@
 # PXE-Server-Centos-7
-PXE Server Centos 7
+
 
 This code is distributed under the GNU LGPL v3.0 license.
 
