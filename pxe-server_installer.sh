@@ -32,7 +32,6 @@
 
 #INSTALL PACKAGES
 yum -y install vim wget net-tools mc screen openssl rsync git
-yum -y install nginx
 yum -y install createrepo epel-release memtest86+
 yum -y install syslinux tftp-server
 
@@ -51,3 +50,7 @@ yes |cp -fra /usr/src/PXE-Server-Centos-7/conf/tftp.service /etc/systemd/system/
 systemctl start tftp.socket
 systemctl enable tftp.socket
 #journalctl -f -n0
+
+# ------------------ REPO LOCAL ------------------
+#INSTALL PACKAGES 
+yum -y install nginx
