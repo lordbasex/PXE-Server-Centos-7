@@ -34,7 +34,7 @@
 yum -y install vim wget net-tools mc screen openssl rsync git
 yum -y install nginx
 yum -y install createrepo epel-release memtest86+
-yum install syslinux tftp-server
+yum -y install syslinux tftp-server
 
 #DONWLOAD GIT
 cd /usr/src/
