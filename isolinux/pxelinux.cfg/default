@@ -6,7 +6,7 @@ label ks
   menu label ^Install CentOS7 using Kickstart - LordBaseX
   menu default
   kernel vmlinuz
-  append initrd=initrd.img ip=dhcp ksdevice=link ks=http://127.0.0.1/centos7-ks.cfg
+  append initrd=initrd.img ip=dhcp ksdevice=link ks=http://127.0.0.1/ks/centos7-ks.cfg
 label repo
   menu label ^Install CentOS7 without Kickstart
   kernel vmlinuz
