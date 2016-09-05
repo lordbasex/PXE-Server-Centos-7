@@ -30,9 +30,9 @@
 #  This copyright notice MUST APPEAR in all copies of the script!
 #
 
+# ------------------ TFTP LOCAL ------------------
 #INSTALL PACKAGES
 yum -y install vim wget net-tools mc screen openssl rsync git
-yum -y install createrepo epel-release memtest86+
 yum -y install syslinux tftp-server
 
 #DONWLOAD GIT
@@ -54,3 +54,4 @@ systemctl enable tftp.socket
 # ------------------ REPO LOCAL ------------------
 #INSTALL PACKAGES 
 yum -y install nginx
+yum -y install createrepo epel-release memtest86+
