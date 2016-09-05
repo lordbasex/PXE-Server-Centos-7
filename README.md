@@ -14,3 +14,7 @@ Install the git package and follow the instructions on a [CentOS 7 64bit](http:/
 ```bash
 bash <( curl -s https://raw.githubusercontent.com/lordbasex/PXE-Server-Centos-7/master/pxe-server_installer.sh )
 ```
+
+## Password
+user is: root
+The password is: cnsoluciones.com
