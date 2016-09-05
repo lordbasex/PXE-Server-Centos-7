@@ -38,7 +38,7 @@ yum install syslinux tftp-server
 
 #DONWLOAD GIT
 cd /usr/src/
-git clone https://github.com/lordbasex/PXE-Server-Centos-7.gi
+git clone https://github.com/lordbasex/PXE-Server-Centos-7.git
 
 #TFTP configure
 ln -s '/usr/lib/systemd/system/tftp.socket' '/etc/systemd/system/sockets.target.wants/tftp.socket'
