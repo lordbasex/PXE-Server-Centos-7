@@ -43,7 +43,6 @@ git clone https://github.com/lordbasex/PXE-Server-Centos-7.git
 #TFTP configure
 ln -s '/usr/lib/systemd/system/tftp.socket' '/etc/systemd/system/sockets.target.wants/tftp.socket'
 cd /var/lib/tftpboot
-mkdir -p /var/lib/tftpboot/pxelinux.cfg
 yes |cp -fra /usr/src/PXE-Server-Centos-7/isolinux/* /var/lib/tftpboot/
 cp /usr/lib/systemd/system/tftp.service /etc/systemd/system
 mv /etc/systemd/system/tftp.service /etc/systemd/system/tftp.service.org
