@@ -16,5 +16,6 @@ bash <( curl -s https://raw.githubusercontent.com/lordbasex/PXE-Server-Centos-7/
 ```
 
 ## Password
-user is: root
+The user is: root
+
 The password is: cnsoluciones.com
