@@ -55,3 +55,24 @@ systemctl enable tftp.socket
 #INSTALL PACKAGES 
 yum -y install nginx
 yum -y install createrepo epel-release memtest86+
+
+#CREATE MIRROR LOCAL
+VERSION="CentOS-7-x86_64-DVD-1511.iso";
+CHECKOUT_DIR="/usr/src/isobuild";
+mkdir -p  ${CHECKOUT_DIR}
+mkdir -p /var/www/html/repos/centos/7/{os/x86_64,updates/x86_64}
+cd /usr/src && wget http://centos.brisanet.com.br/7/isos/x86_64/${VERSION}
+mount -t iso9660 -o loop /usr/src/${VERSION} ${CHECKOUT_DIR}
+rsync -a -H  ${CHECKOUT_DIR}/ /var/www/html/repos/centos/7/os/x86_64/
+umount ${CHECKOUT_DIR}
+
+#CONFIGURATION NGINX
+mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.org
+yes |cp -fra /usr/src/PXE-Server-Centos-7/nginx/* /etc/nginx/
+
+# TEMPLATE KS
+mkdir -p /var/www/html/repos/ks
+yes |cp -fra /usr/src/PXE-Server-Centos-7/ks/* /var/www/html/repos/ks/
+
+systemctl start nginx
+systemctl enable nginx
