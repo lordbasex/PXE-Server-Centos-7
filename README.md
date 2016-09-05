@@ -8,7 +8,7 @@ This code is distributed under the GNU LGPL v3.0 license.
 
 ## Installation
 
-Install the git package and follow the instructions on a[CentOS 7 64bit](http://centos.brisanet.com.br/7/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso)
+Install the git package and follow the instructions on a [CentOS 7 64bit](http://centos.brisanet.com.br/7/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso)
 
 
 ```bash
