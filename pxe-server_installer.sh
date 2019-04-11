@@ -57,11 +57,12 @@ yum -y install nginx
 yum -y install createrepo epel-release memtest86+
 
 #CREATE MIRROR LOCAL
-VERSION="CentOS-7-x86_64-DVD-1511.iso";
+VERSION="CentOS-7-x86_64-Minimal-1810.iso";
+URL="http://mirror.facebook.net/centos/7/isos/x86_64"
 CHECKOUT_DIR="/usr/src/isobuild";
 mkdir -p  ${CHECKOUT_DIR}
 mkdir -p /var/www/html/repos/centos/7/{os/x86_64,updates/x86_64}
-cd /usr/src && wget http://centos.brisanet.com.br/7/isos/x86_64/${VERSION}
+cd /usr/src && wget ${URL}/${VERSION}
 mount -t iso9660 -o loop /usr/src/${VERSION} ${CHECKOUT_DIR}
 rsync -a -H  ${CHECKOUT_DIR}/ /var/www/html/repos/centos/7/os/x86_64/
 umount ${CHECKOUT_DIR}
